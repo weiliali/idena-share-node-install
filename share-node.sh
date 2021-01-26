@@ -18,9 +18,8 @@ echo "   1.install screen      2.install/update node
 		  then
 			  echo Type in new node version \(eg. 0.19.3\)
 			  read version
-			  cd ~
 			  wget https://github.com/idena-network/idena-go/releases/download/v$version/idena-node-linux-$version
-			  mv idena-* idena-go
+			  cp idena-* idena-go
 
 		  elif [[ "$num" -eq 3 ]];
 		  then
