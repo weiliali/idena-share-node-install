@@ -2,8 +2,7 @@
 echo "   1.install screen      2.install/update node
     3.chmod +x idena-go     4.git idena-node-proxy
        5.npm install   6.ngrok http 80
-          7.exchange env 
-	     8.npm start   9.pm2 delete idena-node-proxy
+          7.exchange env    8.pm2 delete idena-node-proxy
 	          type in your choose:"
 		  read num
 		  if [[ "$num" -eq 1 ]];
@@ -50,12 +49,9 @@ echo "   1.install screen      2.install/update node
 		  elif [[ "$num" -eq 7 ]];
 		  then
 			  nano idena-node-proxy/.env
-
-		  elif [[ "$num" -eq 8 ]];
-		  then
 			  cd idena-node-proxy && npm start
 
-		  elif [[ "$num" -eq 9 ]];
+		  elif [[ "$num" -eq 8 ]];
 		  then
 			  pm2 delete idena-node-proxy
 		  fi
